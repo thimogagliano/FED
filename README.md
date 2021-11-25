@@ -60,13 +60,13 @@ De tweede pagina van de website is vermeld als: Leer ons kennen, link is https:/
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+<img src="images/breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
-### dynamisch deel (bijv menu): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+### dynamisch deel 1, : 
+<img src="images/dynamisch1.jpg" width="375px" alt="breakdown van een dynamisch deel van de navigatie die zich in de footer bevindt">
 
-### wellicht nog een dynamisch deel (bijv filter): 
-<img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+### dynamisch deel 2, : 
+<img src="images/dynamisch2.jpg" width="375px" alt="breakdown van nog een dynamisch deel van de verschillende merken die ook een navigatie zijn naar een eigen pagina">
 
 </details>
 
@@ -80,7 +80,13 @@ De tweede pagina van de website is vermeld als: Leer ons kennen, link is https:/
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+- Het opzetten van de html naar aanleiding van de breakdownschets verliep goed en was zonder veel poespas gedaan. Het was alleen nog een beetje zoeken welke elementen er gebruikt kunnen worden waarbij de semantiek ook klopt
+- Het was wat lastiger om de website te onderzoeken hoe dit is opgebouwd omdat het er best verwarrend uitziet en elementen worden gebruikt die je normaal niet zoveel ziet.
+Screenshot van de inspectie tool van de Coca-Cola website: 
+<img src="./images/screenshotinspectie.jpg" width="375px" alt="screenshot van de inspectie tool bij de Coca-Cola website">
+- Voorderest niet tegen problemen aangelopen, het invullen van de html is waar ik me het meest mee bezig heb gehouden waarbij de afbeeldingen en de tekst van de website in de html worden geplaatst voordat ik begin met de CSS.
+Screenshot van de code bij het invullen van de html: 
+<img src="./images/screenshotcodeinvullen.jpg" width="375px" alt="screenshot van de code waarbij de html wordt ingevuld met afbeeldingen en de tekst op de website">
 
 
 ### Agenda voor meeting
@@ -235,8 +241,11 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. bron 1: https://www.w3schools.com/howto/howto_css_searchbar.asp
+Bekijken hoe een search bar wordt gedefinieerd.
+2. bron 2: https://www.w3schools.com/css/css_navbar.asp
+Bekijken hoe een navigatie in elkaar steekt.
+3. bron 3: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+Bekijken welke html elementen er zijn en wat ze doen.
 
 </details>
