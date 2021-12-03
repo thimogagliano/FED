@@ -102,10 +102,11 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Bij de meeting was het duidelijk dat ik wel goed opweg was. Ik had de html klaar en de content ingevuld wat er goed uizag.
+- Ik wou na de meeting beginnen met het schrijven CSS om de in ieder geval de pagina te stijlen.
+- Ik kreeg nog tips om de layout van de verschillende afbeeldingen en tekstvlakken te maken met flexbox of grid zodat het wat makkelijker wordt.
+
+
 
 </details>
 
@@ -119,7 +120,11 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Het schrijven van de CSS voor de styling van de pagina verliep eerst wat moeizaam omdat het eerst weer even moest worden opgestart met wat er eerder is geleerd.
+Ik had wat moeite met het positioneren van elementen en hoe de afbeeldingen goed over elkaar heen konden lopen, maar na wat uitproberen is dit goed gelukt voor de mobiel versie.
+Afbeelding vanuit de eerste pagina: <img src="./images/positioneren.jpg" alt="Plaatje van het positioneren binnen de eerste pagina">
+Afbeelding van de code voor de eerste pagina (code van de header): <img src="./images/codeheader.jpg" alt="Plaatje van de code voor de styling van de header">
+
 
 
 ### Agenda voor meeting
@@ -247,5 +252,14 @@ Bekijken hoe een search bar wordt gedefinieerd.
 Bekijken hoe een navigatie in elkaar steekt.
 3. bron 3: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 Bekijken welke html elementen er zijn en wat ze doen.
+4. bron 4: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Bekijken wat er mogelijk is met flexbox.
+5. bron 5: https://coder-coder.com/how-to-fix-css-background-image-not-working/
+bekijken hoe een background-image kan worden toegevoegd en wat er aan kan worden veranderd
+6. bron 6:
+7. bron 7:
+8. bron 8:
+9. bron 9:
+10. bron 10: 
 
 </details>

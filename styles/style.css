@@ -1,10 +1,783 @@
 /* CSS Document */
 *, *::after, *::before {
   box-sizing:border-box;
-  margin: 0em;
-  padding: 0em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
 }
 
 
 
 
+/* custom properties */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+:root {
+  --text-default-color: black;
+  --background-alt-color: black;
+  --background-altdrop-color: rgb(242,242,242);
+  --text-alt-color: white;
+  --buttonstyle-active-color: rgb(247,0,0);
+  --text-alt-link-color: rgb(247,0,0);
+  --button-style-color: black;
+  --border-article-color: rgb(216,216,216);
+}
+
+
+
+
+/* styling pagina één, Onze merken & verhalen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* algemene stying van pagina één, Onze merken &v verhalen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+body {
+  font-family: "Outfit", "Helvetica", "Arial", "sans-serif";
+}
+
+
+/* styling van elementen binnen de header, Onze merken & verhalen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+header {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  background-color: var(--background-alt-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  z-index: 3;
+}
+
+h1 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+h1 a {
+  color: var(--text-alt-color);
+  text-decoration: none;
+}
+
+header nav ul {
+  background-color: var(--background-alt-color);
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  transform:translateY(-840px);
+  z-index: 3;
+}
+
+header nav button {
+  text-transform: uppercase;
+  text-decoration: underline;
+  background-color: var(--background-alt-color);
+  color: var(--text-alt-color);
+  font-weight: 600;
+}
+
+header nav ul li {
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid grey;
+}
+
+header nav ul li:first-of-type {
+  margin-top: 2em;
+}
+
+header nav ul li:last-of-type {
+  margin-bottom: 25em;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-alt-color);
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-left: 1.2em;
+}
+
+/* styling toegevoegd via js bij klikken op button */
+
+header nav ul.menu {
+  background-color: var(--background-alt-color);
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 892px;
+  transition: 0.3s;
+}
+
+header fieldset img {
+  max-width: 2em;
+  margin-right: 0.5em;
+}
+
+
+/* styling van elementen binnen de main, Onze merken & verhalen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+main section:nth-of-type(3) section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.8em;
+}
+
+
+main section:nth-of-type(3) section a img {
+  position: relative;
+  min-width: 2em;
+  max-width: 19.5em;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+main section:nth-of-type(3) section img {
+  position: absolute;
+  min-width: 2em;
+  max-width: 10em;
+  z-index: 2;
+}
+
+main section:nth-of-type(2) nav {
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-bottom: 2em;
+}
+
+main section:nth-of-type(2) nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main section:nth-of-type(2) nav ul li {
+  list-style: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+
+main section:nth-of-type(2) nav ul li a {
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid var(--button-style-color);
+  color: var(--button-style-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+main section:nth-of-type(2) nav ul li span a{
+  font-weight: 800;
+  padding: 0.35em;
+  border-radius: 5px;
+  border: 1px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+}
+
+main section:first-of-type h2 {
+  font-size: 1.7em;
+  font-weight: 1000;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 1em;
+  margin-right: 1em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+main section:nth-of-type(4) h2 {
+  font-size: 1.7em;
+  font-weight: 1000;
+  text-align: center;
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  line-height: 1.1em;
+  margin-bottom: 1em;
+}
+
+main section:nth-of-type(4) section p {
+  font-size: 1.10em;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.9em;
+
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+main section:nth-of-type(4) section p:nth-of-type(2) {
+  margin-top: 2em;
+}
+
+main section:nth-of-type(4) section p a {
+  color: var(--text-alt-link-color);
+  text-decoration: none;
+}
+
+main section:nth-of-type(4) section:nth-of-type(2) a {
+  display: flex;
+  justify-content: center;
+}
+
+main section:nth-of-type(4) section a img {
+  min-width: 12em;
+  max-width: 15.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+main section:nth-of-type(5) nav {
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-bottom: 2em;
+}
+
+main section:nth-of-type(5) nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main section:nth-of-type(5) nav ul li {
+  list-style: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1em;
+}
+
+main section:nth-of-type(5) nav ul li a {
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid var(--button-style-color);
+  color: var(--button-style-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+main section:nth-of-type(5) nav ul li span a {
+  font-weight: 800;
+  padding: 0.35em;
+  border-radius: 5px;
+  border: 1px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+}
+
+main section:nth-of-type(6) section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.8em;
+}
+
+
+main section:nth-of-type(6) section a img {
+  position: relative;
+  min-width: 2em;
+  max-width: 19.5em;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+main section:nth-of-type(6) section img {
+  position: absolute;
+  min-width: 2em;
+  max-width: 10em;
+  z-index: 2;
+}
+
+main section:nth-of-type(7) h2 {
+  font-size: 3em;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  line-height: 1.1em;
+}
+
+main section:nth-of-type(8) nav {
+  margin-bottom: 2em;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+main section:nth-of-type(8) nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main section:nth-of-type(8) nav ul li {
+  list-style: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-top: 1.4em;
+}
+
+main section:nth-of-type(8) nav ul li a {
+  font-weight: 400;
+  border-radius: 5px;
+  border: 1px solid var(--button-style-color);
+  color: var(--button-style-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+main section:nth-of-type(8) nav ul li span a {
+  font-weight: 800;
+  padding: 0.35em;
+  border-radius: 5px;
+  border: 1px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+}
+
+
+
+main section:nth-of-type(9) section {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+  border: 3px solid var(--border-article-color);
+  border-radius: 5px;
+  margin-left: 3.8em;
+  margin-right: 3.8em;
+  margin-bottom: 1em;
+}
+
+main section:nth-of-type(9) section:last-of-type {
+  margin-bottom: 4em;
+}
+
+main section:nth-of-type(9) section h3 {
+  margin-left: 1.1em;
+  margin-right: 1.1em;
+  margin-top: 1em;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+main section:nth-of-type(9) section p {
+  margin-left: 1.3em;
+  margin-right: 1.1em;
+  font-size: 0.9em;
+  font-weight: 200;
+}
+
+main section:nth-of-type(9) section p:nth-of-type(2) {
+  font-size: 0.7em;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0.7em;
+  margin-left: 1.7em;
+  margin-bottom: 1.5em;
+}
+
+main section:nth-of-type(9) section:first-of-type p {
+  font-size: 0.7em;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0.3em;
+  margin-left: 1.7em;
+  margin-bottom: 1.5em;
+}
+
+main section:nth-of-type(9) section img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+
+/* styling van elementen binnen de footer, Onze merken & verhalen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+footer {
+  margin-bottom: -1em;
+}
+
+footer p:first-of-type {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.5em;
+  background-color: var(--background-altdrop-color);
+}
+
+footer p:nth-of-type(2) {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.5em;
+  background-color: var(--background-altdrop-color);
+}
+
+footer p:nth-of-type(3) {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.5em;
+  background-color: var(--background-altdrop-color);
+}
+
+footer nav:first-of-type {
+  margin-bottom: 0.5em;
+}
+
+footer nav:first-of-type ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer nav:first-of-type ul li {
+  list-style: none;
+}
+
+footer nav:first-of-type ul li a img{
+  max-width: 3.5em;
+  margin: 0.2em;
+}
+
+footer section:first-of-type {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+footer section:first-of-type section a img {
+  max-width: 6em;
+  margin: 0.9em;
+}
+
+footer section:nth-of-type(2) {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+footer section:nth-of-type(2).landen {
+  background-image: url("/images/landenmapgrey.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+footer section:nth-of-type(2) section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2em;
+}
+
+footer section:nth-of-type(2) section h3 {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 1000;
+}
+
+footer section:nth-of-type(2) section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer section:nth-of-type(2) section ul li {
+  list-style: none;
+  margin: -0.1em;
+}
+
+footer section:nth-of-type(2) section ul li a {
+  font-size: 0.8em;
+  font-weight: 200;
+  text-decoration: none;
+  color: var(--text-default-color);
+}
+
+footer section:nth-of-type(3).onder {
+  background-color: var(--background-alt-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer section:nth-of-type(3) section:first-of-type {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+footer section:nth-of-type(3) section:first-of-type nav ul li {
+  margin-left: 0.2em;
+}
+
+footer section:nth-of-type(3) section:first-of-type nav ul li a {
+  text-decoration: none;
+  color: var(--text-alt-color);
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+footer section:nth-of-type(3) h2 {
+  margin-top: 1em;
+}
+
+footer section:nth-of-type(3) h2 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-alt-color);
+  font-size: 1.3em;
+}
+
+footer section:nth-of-type(3) p {
+  background-color: var(--background-alt-color);
+  color: var(--text-alt-color);
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+
+
+
+/* styling van pagina twee, Leer ons kennen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* styling van pagina twee, Leer ons kennen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+body.paginatwee {
+  font-family: "Outfit", "Helvetica", "Arial", "sans-serif";
+}
+
+
+/* styling van elementen binnen de header, Leer ons kennen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+body.paginatwee header {
+  background-color: var(--background-alt-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  margin-bottom: 2em;
+}
+
+body.paginatwee h1 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+body.paginatwee h1 a {
+  color: var(--text-alt-color);
+  text-decoration: none;
+}
+
+body.paginatwee header nav ul {
+  background-color: var(--background-alt-color);
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  transform:translateY(-140px)
+}
+
+body.paginatwee header fieldset img {
+  max-width: 2em;
+  margin-right: 0.5em;
+}
+
+
+/* styling van elementen binnen de main, Leer ons kennen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* styling van elementen binnen de footer, Leer ons kennen */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+body.paginatwee footer {
+  margin-bottom: -1em;
+}
+
+body.paginatwee footer p:first-of-type {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.5em;
+  background-color: var(--background-altdrop-color);
+}
+
+body.paginatwee footer p:nth-of-type(2) {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.5em;
+  background-color: var(--background-altdrop-color);
+}
+
+body.paginatwee footer p:nth-of-type(3) {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.5em;
+  background-color: var(--background-altdrop-color);
+}
+
+body.paginatwee footer nav:first-of-type {
+  margin-bottom: 0.5em;
+}
+
+body.paginatwee footer nav:first-of-type ul {
+  display: flex;
+  justify-content: center;
+}
+
+body.paginatwee footer nav:first-of-type ul li {
+  list-style: none;
+}
+
+body.paginatwee footer nav:first-of-type ul li a img{
+  max-width: 3.5em;
+  margin: 0.2em;
+}
+
+body.paginatwee footer section:first-of-type {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body.paginatwee footer section:first-of-type section a img {
+  max-width: 6em;
+  margin: 0.9em;
+}
+
+body.paginatwee footer section:nth-of-type(2) {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body.paginatwee footer section:nth-of-type(2).landen {
+  background-image: url("/images/landenmapgrey.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+body.paginatwee footer section:nth-of-type(2) section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2em;
+}
+
+body.paginatwee footer section:nth-of-type(2) section h3 {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 1000;
+}
+
+body.paginatwee footer section:nth-of-type(2) section ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.paginatwee footer section:nth-of-type(2) section ul li {
+  list-style: none;
+  margin: -0.1em;
+}
+
+body.paginatwee footer section:nth-of-type(2) section ul li a {
+  font-size: 0.8em;
+  font-weight: 200;
+  text-decoration: none;
+  color: var(--text-default-color);
+}
+
+body.paginatwee footer section:nth-of-type(3).onder {
+  background-color: var(--background-alt-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.paginatwee footer section:nth-of-type(3) section:first-of-type {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+body.paginatwee footer section:nth-of-type(3) section:first-of-type nav ul li {
+  margin-left: 0.2em;
+}
+
+body.paginatwee footer section:nth-of-type(3) section:first-of-type nav ul li a {
+  text-decoration: none;
+  color: var(--text-alt-color);
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+body.paginatwee footer section:nth-of-type(3) h2 {
+  margin-top: 1em;
+}
+
+body.paginatwee footer section:nth-of-type(3) h2 a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-alt-color);
+  font-size: 1.3em;
+}
+
+body.paginatwee footer section:nth-of-type(3) p {
+  background-color: var(--background-alt-color);
+  color: var(--text-alt-color);
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 400;
+}
