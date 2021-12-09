@@ -25,6 +25,7 @@
   --text-alt-link-color: rgb(247,0,0);
   --button-style-color: black;
   --border-article-color: rgb(216,216,216);
+  --border-alt-color: lightgrey;
 }
 
 
@@ -83,14 +84,17 @@ header nav ul {
   top: 0px;
   transform:translateY(-840px);
   z-index: 3;
+  transition: 0.5s;
 }
 
 header nav button {
   text-transform: uppercase;
-  text-decoration: underline;
   background-color: var(--background-alt-color);
   color: var(--text-alt-color);
-  font-weight: 600;
+  font-weight: 200;
+  font-size: 2em;
+  transform:rotate(90deg);
+  margin-left: 0.4em;
 }
 
 header nav ul li {
@@ -120,10 +124,11 @@ header nav ul li a {
 header nav ul.menu {
   background-color: var(--background-alt-color);
   position: fixed;
+  top: 3em;
   left: 0px;
   right: 0px;
-  top: 892px;
-  transition: 0.3s;
+  bottom: 0px;
+  transform:translate(0);
 }
 
 header fieldset img {
@@ -190,9 +195,9 @@ main section:nth-of-type(2) nav ul li a {
   font-size: 0.7em;
 }
 
-main section:nth-of-type(2) nav ul li span a{
+main section:nth-of-type(2) nav ul li span a {
   font-weight: 800;
-  padding: 0.35em;
+  padding: 0.40em;
   border-radius: 5px;
   border: 1px solid var(--buttonstyle-active-color);
   color: var(--buttonstyle-active-color);
@@ -203,6 +208,7 @@ main section:first-of-type h2 {
   font-weight: 1000;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 3em;
   margin-left: 1em;
   margin-right: 1em;
   line-height: 1em;
@@ -364,10 +370,12 @@ main section:nth-of-type(8) nav ul li span a {
 
 main section:nth-of-type(9) section {
   display: flex;
-  flex-direction: column;
-  justify-content: left;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
   border: 3px solid var(--border-article-color);
+  max-width: 20em;
   border-radius: 5px;
   margin-left: 3.8em;
   margin-right: 3.8em;
@@ -578,9 +586,6 @@ footer section:nth-of-type(3) p {
 
 
 
-/* styling van pagina twee, Leer ons kennen */
-/* ------------------------------------------------------------------------------------------------------------------------------------------- */
-
 
 body.paginatwee {
   font-family: "Outfit", "Helvetica", "Arial", "sans-serif";
@@ -592,6 +597,10 @@ body.paginatwee {
 
 
 body.paginatwee header {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
   background-color: var(--background-alt-color);
   display: flex;
   flex-direction: row;
@@ -599,6 +608,7 @@ body.paginatwee header {
   align-items: center;
   padding: 0.5em;
   margin-bottom: 2em;
+  z-index: 3;
 }
 
 body.paginatwee h1 {
@@ -618,7 +628,53 @@ body.paginatwee header nav ul {
   left: 0px;
   right: 0px;
   top: 0px;
-  transform:translateY(-140px)
+  transform:translateY(-840px);
+  z-index: 3;
+  transition: 0.5s;
+}
+
+body.paginatwee header nav button {
+  text-transform: uppercase;
+  background-color: var(--background-alt-color);
+  color: var(--text-alt-color);
+  font-weight: 200;
+  font-size: 2em;
+  transform:rotate(90deg);
+  margin-left: 0.4em;
+}
+
+body.paginatwee header nav ul li {
+  margin-bottom: 0.7em;
+  border-bottom: 1px solid grey;
+}
+
+body.paginatwee header nav ul li:first-of-type {
+  margin-top: 2em;
+}
+
+body.paginatwee header nav ul li:last-of-type {
+  margin-bottom: 25em;
+}
+
+body.paginatwee header nav ul li a {
+  text-decoration: none;
+  color: var(--text-alt-color);
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-left: 1.2em;
+}
+
+/* styling toegevoegd via js bij klikken op button */
+
+body.paginatwee header nav ul.menu {
+  background-color: var(--background-alt-color);
+  position: fixed;
+  top: 3em;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transform:translate(0);
 }
 
 body.paginatwee header fieldset img {
@@ -630,6 +686,139 @@ body.paginatwee header fieldset img {
 /* styling van elementen binnen de main, Leer ons kennen */
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
+body.paginatwee main section:first-of-type img {
+  margin-top: 3.2em;
+  max-width: 100%;
+}
+
+body.paginatwee main section:nth-of-type(2) h2 {
+  font-size: 1.7em;
+  font-weight: 1000;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+body.paginatwee main section:nth-of-type(2) p {
+  font-size: 1.25em;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.2em;
+
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+body.paginatwee main section:nth-of-type(3) nav {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
+body.paginatwee main section:nth-of-type(3) li {
+  border-top: 1px solid var(--border-alt-color);
+  padding: 1em;
+  list-style: none;
+}
+
+body.paginatwee main section:nth-of-type(3) li:last-of-type {
+  border-bottom: 1px solid var(--border-alt-color);
+}
+
+body.paginatwee main section:nth-of-type(3) li a {
+  text-decoration: none;
+  color: var(--text-alt-link-color);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+body.paginatwee main section:nth-of-type(4) h2 {
+  font-weight: 600;
+  font-size: 3em;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1.3em;
+}
+
+body.paginatwee main section:nth-of-type(5) section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  border: 3px solid var(--border-article-color);
+  max-width: 20em;
+  border-radius: 5px;
+  margin-left: 3.8em;
+  margin-right: 3.8em;
+  margin-bottom: 1em;
+}
+
+body.paginatwee main section:nth-of-type(5) section:last-of-type {
+  margin-bottom: 0.9em;
+}
+
+body.paginatwee main section:nth-of-type(5) section h3 {
+  margin-left: 1.1em;
+  margin-right: 1.1em;
+  margin-top: 1em;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+body.paginatwee main section:nth-of-type(5) section p {
+  margin-left: 1.3em;
+  margin-right: 1.1em;
+  font-size: 0.9em;
+  font-weight: 200;
+  text-align: left;
+}
+
+body.paginatwee main section:nth-of-type(5) section p:nth-of-type(2) {
+  font-size: 0.7em;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0.7em;
+  margin-left: 1.7em;
+  margin-bottom: 1.5em;
+}
+
+body.paginatwee main section:nth-of-type(5) section:first-of-type p {
+  font-size: 0.7em;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0.3em;
+  margin-left: 1.7em;
+  margin-bottom: 1.5em;
+}
+
+body.paginatwee main section:nth-of-type(5) section img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-top: 0em;
+}
+
+body.paginatwee main section:nth-of-type(6) {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5em;
+}
+
+body.paginatwee main section:nth-of-type(6) button {
+  color: var(--text-alt-color);
+  background-color: var(--background-alt-color);
+  padding: 0.85em;
+  padding-left: 1.7em;
+  padding-right: 1.7em;
+  font-size: 0.9em;
+  border-radius: 3px;
+}
 
 /* styling van elementen binnen de footer, Leer ons kennen */
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */

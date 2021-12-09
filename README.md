@@ -140,10 +140,11 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Er was niet heel veel feedback op de code, dit ging wel goed en ik was ook goed op weg. Wel waren er een paar tips om de code wat netter te kunnen maken en de juiste 
+elementen nog te gebruiken. Zo had ik een fieldset zonder form, kon ik de translate(y) beter naar -100% doen ipv pixels te gebruiken. 
+- Het ging lekker op weg en ik kan verder gaan met hetgene wat ik nog gedaan wil hebben voor dit vak.
+
+
 
 </details>
 
@@ -194,7 +195,11 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Deze week ging het ook best goed, heb wat minder werk verzet vergeleken met vorige week. Inhoud en styling van alle twee de pagina's is nu redelijk af.
+Het is alleen wat lastiger om sommige specifieke elementen goed te positioneren ook met responsive desgin meegeteld. Het responsive is niet wat ik als focus had gekozen
+dus is het ook geen ramp.
+
+Voor de toevoegingen voor de surface focus moet ik nog wat onderdelen gaan toevoegen zoals een darkmode, een responsive scrollbar in de echte website en states etc.
 
 
 ### Agenda voor meeting
