@@ -157,31 +157,21 @@ elementen nog te gebruiken. Zo had ik een fieldset zonder form, kon ik de transl
 <details>
 <summary>uitwerken na test in 8e voortgang</summary>
 
+Ik was niet fysiek aanwezig bij de les waarin deze tests werden gedaan. Wel heb ik de opdrachten zelf thuis kunnen doen.
+
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
+- Het voorlezen van de koppelingen en de alternatieve tekst bij plaatjes verloopt goed, ik kreeg het niet voor elkaar om een optie te vinden om alleen de headings van de websites voor
+te lezen.
+- De knoppen en belangrijke elementen kunnen worden bedient met muis en toetsenbord.
+- ik heb zelf niet alle middelen om de beperkingen mee uit te voeren, wel heb ik deze zo goed mogelijk proberen te doen en het werd duidelijk dat het best goed te doen is. De knoppen zijn niet
+al te klein, misschien wel een paar maar die zijn wel klikbaar. 
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### States
+De states van de elementen op de websites zijn nog niet volledig of duidelijk uitgewerkt.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Dit kan opgelost worden door deze states nog in de code toe te voegen.
 
-
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 </details>
 
@@ -215,10 +205,11 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Het was duidelijk dat de pagina's de goede kant op gingen en dat ook de code redelijk in orde was.
+- Voor de toevoegingen zoals bijvoorbeeld een darkmode, uitklapbare elementen, geluid en dergelijken moest nog wat aandacht aan worden besteed voor de surface plane focus. Wel
+een goede tip gekregen om dit te doen met een display: none; en dan via javascript het goed te regelen.
+- Ook moest ik nog wat opdrachten voor het testen van de website maken zodat ik weet wat er og verbeterd kan worden.
+
 
 </details>
 
@@ -232,11 +223,29 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Redelijk blij met hou de pagina's zijn geworden in vergelijking met de echte website van coca-cola. 
+Ben niet veel obstakels meer tegengekomen, het was meer een kwestie van een tijdje in de code editor rommelen en de dingen afmaken die ik kon doen. Heb alleen het idee dat ik wat toevoegingen
+mis als het gaat om de surface plane die ik nog wou toevoegen.
+Qua code is het met de validators ook goed gegaan. ik kreeg alleen waarschuwingen van otbrekende headings in sections, maar die zijn niet nodg in de desbetreffende sections.
 
 ### Screenshot(s)
 
 hier screenshot(s) van je eindresultaat
+
+screenshots van code:
+
+html: <img src="images/schtmlcode.jpg" width="375px" alt="screenshot code html">
+CSS: <img src="images/sccsscode.jpg" width="375px" alt="screenshot code CSS">
+Javascript: <img src="images/scjavacode.jpg" width="375px" alt="screenshot code Javascript">
+
+screenshots van pagina's op web:
+
+<img src="images/sceindeen.jpg" width="375px" alt="screenshot website eindresultaat">
+<img src="images/sceindtwee.jpg" width="375px" alt="screenshot website eindresultaat">
+<img src="images/sceinddrie.jpg" width="375px" alt="screenshot website eindresultaat">
+<img src="images/sceindvier.jpg" width="375px" alt="screenshot website eindresultaat">
+<img src="images/sceindvijf.jpg" width="375px" alt="screenshot website eindresultaat">
+<img src="images/sceindzes.jpg" width="375px" alt="screenshot website eindresultaat">
 
 </details>
 
@@ -253,18 +262,23 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
 1. bron 1: https://www.w3schools.com/howto/howto_css_searchbar.asp
 Bekijken hoe een search bar wordt gedefinieerd.
+
 2. bron 2: https://www.w3schools.com/css/css_navbar.asp
 Bekijken hoe een navigatie in elkaar steekt.
+
 3. bron 3: https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 Bekijken welke html elementen er zijn en wat ze doen.
+
 4. bron 4: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 Bekijken wat er mogelijk is met flexbox.
+
 5. bron 5: https://coder-coder.com/how-to-fix-css-background-image-not-working/
-bekijken hoe een background-image kan worden toegevoegd en wat er aan kan worden veranderd
-6. bron 6:
-7. bron 7:
-8. bron 8:
-9. bron 9:
-10. bron 10: 
+bekijken hoe een background-image kan worden toegevoegd en wat er aan kan worden veranderd.
+
+6. bron 6: https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+gebruikt voor het begrijpen van het toepassen van een darkmode in de website.
+
+7. bron 7: https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode
+Ook gebruikt voor het begrijpen van het toepassen van een darkmode in de website.
 
 </details>

@@ -1,6 +1,12 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;
+
+
+/* CSS reset */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -17,16 +23,18 @@
 
 
 :root {
+  --background-color: white;
   --text-default-color: black;
   --background-alt-color: black;
-  --background-altdrop-color: rgb(242,242,242);
+  --background-altdrop-color: rgb(242, 242, 242);
   --text-alt-color: white;
-  --buttonstyle-active-color: rgb(247,0,0);
-  --text-alt-link-color: rgb(247,0,0);
+  --buttonstyle-active-color: rgb(247, 0, 0);
+  --text-alt-link-color: rgb(247, 0, 0);
   --button-style-color: black;
-  --border-article-color: rgb(216,216,216);
+  --border-article-color: rgb(216, 216, 216);
   --border-alt-color: lightgrey;
 }
+
 
 
 
@@ -42,6 +50,7 @@
 
 
 body {
+  background-color: var(--background-color);
   font-family: "Outfit", "Helvetica", "Arial", "sans-serif";
 }
 
@@ -65,15 +74,9 @@ header {
   z-index: 3;
 }
 
-h1 {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-
-h1 a {
-  color: var(--text-alt-color);
-  text-decoration: none;
+header section img {
+  max-width: 2em;
+  margin-right: 0.5em;
 }
 
 header nav ul {
@@ -82,7 +85,7 @@ header nav ul {
   left: 0px;
   right: 0px;
   top: 0px;
-  transform:translateY(-840px);
+  transform: translateY(-840px);
   z-index: 3;
   transition: 0.5s;
 }
@@ -93,7 +96,7 @@ header nav button {
   color: var(--text-alt-color);
   font-weight: 200;
   font-size: 2em;
-  transform:rotate(90deg);
+  transform: rotate(90deg);
   margin-left: 0.4em;
 }
 
@@ -119,6 +122,48 @@ header nav ul li a {
   margin-left: 1.2em;
 }
 
+header nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--text-alt-color);
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-left: 1.2em;
+  transition: 0.3s;
+}
+
+header nav ul li a:focus {
+  text-decoration: underline;
+  color: var(--text-alt-color);
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-left: 1.2em;
+  transition: 0.3s;
+}
+
+header nav ul li a:active {
+  text-decoration: underline;
+  color: var(--text-alt-link-color);
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 1.2em;
+  transition: 0.3s;
+}
+
+
+h1 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+h1 a {
+  color: var(--text-alt-color);
+  text-decoration: none;
+}
+
 /* styling toegevoegd via js bij klikken op button */
 
 header nav ul.menu {
@@ -128,40 +173,26 @@ header nav ul.menu {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  transform:translate(0);
+  transform: translate(0);
 }
 
-header fieldset img {
-  max-width: 2em;
-  margin-right: 0.5em;
-}
+/**/
 
 
 /* styling van elementen binnen de main, Onze merken & verhalen */
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
-main section:nth-of-type(3) section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.8em;
-}
-
-
-main section:nth-of-type(3) section a img {
-  position: relative;
-  min-width: 2em;
-  max-width: 19.5em;
-  z-index: 1;
-  border-radius: 4px;
-}
-
-main section:nth-of-type(3) section img {
-  position: absolute;
-  min-width: 2em;
-  max-width: 10em;
-  z-index: 2;
+main section:first-of-type h2 {
+  font-size: 1.7em;
+  font-weight: 1000;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3em;
+  margin-left: 1em;
+  margin-right: 1em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
 }
 
 main section:nth-of-type(2) nav {
@@ -195,6 +226,42 @@ main section:nth-of-type(2) nav ul li a {
   font-size: 0.7em;
 }
 
+main section:nth-of-type(2) nav ul li a:hover {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--button-style-color);
+  color: var(--button-style-color);
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.3s;
+}
+
+main section:nth-of-type(2) nav ul li a:active {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.2s;
+}
+
+main section:nth-of-type(2) nav ul li a:focus {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.2s;
+}
+
 main section:nth-of-type(2) nav ul li span a {
   font-weight: 800;
   padding: 0.40em;
@@ -203,16 +270,46 @@ main section:nth-of-type(2) nav ul li span a {
   color: var(--buttonstyle-active-color);
 }
 
-main section:first-of-type h2 {
-  font-size: 1.7em;
-  font-weight: 1000;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 3em;
-  margin-left: 1em;
-  margin-right: 1em;
-  line-height: 1em;
-  margin-bottom: 0.5em;
+main section:nth-of-type(3) section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.8em;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* styling van states */
+
+main section:nth-of-type(3) section:hover {
+  transform: scale(1.1);
+
+}
+
+main section:nth-of-type(3) section:focus {
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(3) section:active {
+  transform: scale(0.95);
+}
+
+/**/
+
+
+main section:nth-of-type(3) section a img {
+  position: relative;
+  min-width: 2em;
+  max-width: 19.5em;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+main section:nth-of-type(3) section img {
+  position: absolute;
+  min-width: 2em;
+  max-width: 10em;
+  z-index: 2;
 }
 
 main section:nth-of-type(4) h2 {
@@ -244,9 +341,30 @@ main section:nth-of-type(4) section p a {
   text-decoration: none;
 }
 
+/* states van anchor 'hier' */
+
+main section:nth-of-type(4) section p a:hover {
+  color: var(--text-alt-link-color);
+  text-decoration: underline;
+}
+
+main section:nth-of-type(4) section p a:focus {
+  color: var(--text-alt-link-color);
+  text-decoration: underline;
+}
+
+main section:nth-of-type(4) section p a:active {
+  color: var(--text-alt-link-color);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/**/
+
 main section:nth-of-type(4) section:nth-of-type(2) a {
   display: flex;
   justify-content: center;
+  transition: 0.3s;
 }
 
 main section:nth-of-type(4) section a img {
@@ -255,6 +373,22 @@ main section:nth-of-type(4) section a img {
   margin-top: 2em;
   margin-bottom: 1em;
 }
+
+/* states van anchor 'plaatje van coca-cola partners' */
+
+main section:nth-of-type(4) section a:hover {
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(4) section a:focus {
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(4) section a:active {
+  transform: scale(0.95);
+}
+
+/**/
 
 main section:nth-of-type(5) nav {
   margin-left: 0em;
@@ -287,6 +421,46 @@ main section:nth-of-type(5) nav ul li a {
   font-size: 0.7em;
 }
 
+/* styling van states */
+
+main section:nth-of-type(5) nav ul li a:hover {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--button-style-color);
+  color: var(--button-style-color);
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.3s;
+}
+
+main section:nth-of-type(5) nav ul li a:active {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.2s;
+}
+
+main section:nth-of-type(5) nav ul li a:focus {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.2s;
+}
+
+/**/
+
 main section:nth-of-type(5) nav ul li span a {
   font-weight: 800;
   padding: 0.35em;
@@ -300,8 +474,25 @@ main section:nth-of-type(6) section {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.8em;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
+/* styling van states */
+
+main section:nth-of-type(6) section:hover {
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(6) section:focus {
+  transform: scale(1.1);
+}
+
+main section:nth-of-type(6) section:active {
+  transform: scale(1.1);
+}
+
+/**/
 
 main section:nth-of-type(6) section a img {
   position: relative;
@@ -358,6 +549,46 @@ main section:nth-of-type(8) nav ul li a {
   font-size: 0.7em;
 }
 
+/* styling van states */
+
+main section:nth-of-type(8) nav ul li a:hover {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--button-style-color);
+  color: var(--button-style-color);
+  padding: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.3s;
+}
+
+main section:nth-of-type(8) nav ul li a:active {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.2s;
+}
+
+main section:nth-of-type(8) nav ul li a:focus {
+  font-weight: 800;
+  border-radius: 5px;
+  border: 2px solid var(--buttonstyle-active-color);
+  color: var(--buttonstyle-active-color);
+  padding: 0.4em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  transition: 0.2s;
+}
+
+/**/
+
 main section:nth-of-type(8) nav ul li span a {
   font-weight: 800;
   padding: 0.35em;
@@ -365,8 +596,6 @@ main section:nth-of-type(8) nav ul li span a {
   border: 1px solid var(--buttonstyle-active-color);
   color: var(--buttonstyle-active-color);
 }
-
-
 
 main section:nth-of-type(9) section {
   display: flex;
@@ -434,29 +663,95 @@ footer {
   margin-bottom: -1em;
 }
 
+footer div.openeen {
+  display: none;
+}
+
 footer p:first-of-type {
   font-size: 1.2em;
   font-weight: 200;
   padding: 0.9em;
-  margin-bottom: 0.5em;
-  background-color: var(--background-altdrop-color);
+  margin-bottom: 0.1em;
+  color: var(--text-alt-color);
+  background-color: var(--background-alt-color);
 }
+
+/* styling van states */
+
+footer p:first-of-type:hover {
+  text-decoration: underline;
+}
+
+/**/
 
 footer p:nth-of-type(2) {
   font-size: 1.2em;
   font-weight: 200;
   padding: 0.9em;
-  margin-bottom: 0.5em;
-  background-color: var(--background-altdrop-color);
+  margin-bottom: 0.1em;
+  color: var(--text-alt-color);
+  background-color: var(--background-alt-color);
 }
+
+/* styling van states */
+
+footer p:nth-of-type(2):hover {
+  text-decoration: underline;
+}
+
+/**/
 
 footer p:nth-of-type(3) {
   font-size: 1.2em;
   font-weight: 200;
   padding: 0.9em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
+  color: var(--text-alt-color);
+  background-color: var(--background-alt-color);
+}
+
+/* styling van states */
+
+footer p:nth-of-type(3):hover {
+  text-decoration: underline;
+}
+
+/**/
+
+/* styling toegevoegd bij het klikken op de p via js */
+
+footer p:first-of-type.dichteen {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.1em;
+  color: var(--text-default-color);
   background-color: var(--background-altdrop-color);
 }
+
+/* styling toegevoegd bij het klikken op de p via js */
+
+footer p:nth-of-type(2).dichttwee {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.1em;
+  color: var(--text-default-color);
+  background-color: var(--background-altdrop-color);
+}
+
+/* styling toegevoegd bij het klikken op de p via js */
+
+footer p:nth-of-type(3).dichtdrie {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.1em;
+  color: var(--text-default-color);
+  background-color: var(--background-altdrop-color);
+}
+
+/**/
 
 footer nav:first-of-type {
   margin-bottom: 0.5em;
@@ -471,16 +766,24 @@ footer nav:first-of-type ul li {
   list-style: none;
 }
 
-footer nav:first-of-type ul li a img{
+footer nav:first-of-type ul li a img {
   max-width: 3.5em;
   margin: 0.2em;
 }
 
-footer section:first-of-type {
+/* styling toegevoegd bij het klikken op de p via js */
+
+footer section:first-of-type.opentwee {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+/**/
+
+footer section:first-of-type {
+  display: none;
 }
 
 footer section:first-of-type section a img {
@@ -489,23 +792,31 @@ footer section:first-of-type section a img {
 }
 
 footer section:nth-of-type(2) {
+  background-image: url("/images/landenmapgrey.png");
+  background-repeat: no-repeat;
+  background-position: top;
+
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+
 footer section:nth-of-type(2).landen {
-  background-image: url("/images/landenmapgrey.png");
-  background-repeat: no-repeat;
-  background-position: top;
+  display: none;
 }
+
 
 footer section:nth-of-type(2) section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin: 2em;
+}
+
+footer section.negeren {
+  background-image: none;
 }
 
 footer section:nth-of-type(2) section h3 {
@@ -558,6 +869,31 @@ footer section:nth-of-type(3) section:first-of-type nav ul li a {
   font-weight: 200;
 }
 
+/* styling van de states */
+
+footer section:nth-of-type(3) section:first-of-type nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--text-alt-color);
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+footer section:nth-of-type(3) section:first-of-type nav ul li a:focus {
+  text-decoration: underline;
+  color: var(--text-alt-color);
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+footer section:nth-of-type(3) section:first-of-type nav ul li a:active {
+  text-decoration: underline;
+  color: var(--text-alt-link-color);
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+/**/
+
 footer section:nth-of-type(3) h2 {
   margin-top: 1em;
 }
@@ -588,6 +924,7 @@ footer section:nth-of-type(3) p {
 
 
 body.paginatwee {
+  background-color: var(--background-color);
   font-family: "Outfit", "Helvetica", "Arial", "sans-serif";
 }
 
@@ -611,15 +948,9 @@ body.paginatwee header {
   z-index: 3;
 }
 
-body.paginatwee h1 {
-  font-size: 0.8em;
-  text-transform: uppercase;
-  font-weight: 800;
-}
-
-body.paginatwee h1 a {
-  color: var(--text-alt-color);
-  text-decoration: none;
+body.paginatwee header section img {
+  max-width: 2em;
+  margin-right: 0.5em;
 }
 
 body.paginatwee header nav ul {
@@ -628,7 +959,7 @@ body.paginatwee header nav ul {
   left: 0px;
   right: 0px;
   top: 0px;
-  transform:translateY(-840px);
+  transform: translateY(-840px);
   z-index: 3;
   transition: 0.5s;
 }
@@ -639,7 +970,7 @@ body.paginatwee header nav button {
   color: var(--text-alt-color);
   font-weight: 200;
   font-size: 2em;
-  transform:rotate(90deg);
+  transform: rotate(90deg);
   margin-left: 0.4em;
 }
 
@@ -665,6 +996,51 @@ body.paginatwee header nav ul li a {
   margin-left: 1.2em;
 }
 
+/* styling van states */
+
+body.paginatwee header nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--text-alt-color);
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-left: 1.2em;
+  transition: 0.3s;
+}
+
+body.paginatwee header nav ul li a:focus {
+  text-decoration: underline;
+  color: var(--text-alt-color);
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-left: 1.2em;
+  transition: 0.3s;
+}
+
+body.paginatwee header nav ul li a:active {
+  text-decoration: underline;
+  color: var(--text-alt-link-color);
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 1.2em;
+  transition: 0.3s;
+}
+
+/**/
+
+body.paginatwee h1 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+body.paginatwee h1 a {
+  color: var(--text-alt-color);
+  text-decoration: none;
+}
+
 /* styling toegevoegd via js bij klikken op button */
 
 body.paginatwee header nav ul.menu {
@@ -674,13 +1050,10 @@ body.paginatwee header nav ul.menu {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  transform:translate(0);
+  transform: translate(0);
 }
 
-body.paginatwee header fieldset img {
-  max-width: 2em;
-  margin-right: 0.5em;
-}
+/**/
 
 
 /* styling van elementen binnen de main, Leer ons kennen */
@@ -735,6 +1108,31 @@ body.paginatwee main section:nth-of-type(3) li a {
   font-weight: 600;
   font-size: 1.1em;
 }
+
+/* styling van states */
+
+body.paginatwee main section:nth-of-type(3) li a:hover {
+  text-decoration: underline;
+  color: var(--text-alt-link-color);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+body.paginatwee main section:nth-of-type(3) li a:focus {
+  text-decoration: underline;
+  color: var(--text-alt-link-color);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+body.paginatwee main section:nth-of-type(3) li a:active {
+  text-decoration: underline;
+  color: var(--text-default-color);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/**/
 
 body.paginatwee main section:nth-of-type(4) h2 {
   font-weight: 600;
@@ -820,6 +1218,48 @@ body.paginatwee main section:nth-of-type(6) button {
   border-radius: 3px;
 }
 
+/* styling van states */
+
+body.paginatwee main section:nth-of-type(6) button:hover {
+  color: var(--text-default-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--button-style-color);
+  padding: 0.85em;
+  padding-left: 1.7em;
+  padding-right: 1.7em;
+  font-size: 0.9em;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+body.paginatwee main section:nth-of-type(6) button:active {
+  color: var(--text-alt-link-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--buttonstyle-active-color);
+  padding: 0.8em;
+  padding-left: 1.6em;
+  padding-right: 1.6em;
+  font-size: 0.9em;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+body.paginatwee main section:nth-of-type(6) button:focus {
+  color: var(--text-alt-link-color);
+  background-color: var(--background-color);
+  border: 2px solid var(--buttonstyle-active-color);
+  padding: 0.85em;
+  padding-left: 1.7em;
+  padding-right: 1.7em;
+  font-size: 0.9em;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/**/
+
 /* styling van elementen binnen de footer, Leer ons kennen */
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -828,29 +1268,95 @@ body.paginatwee footer {
   margin-bottom: -1em;
 }
 
+body.paginatwee footer div.openeen {
+  display: none;
+}
+
 body.paginatwee footer p:first-of-type {
   font-size: 1.2em;
   font-weight: 200;
   padding: 0.9em;
-  margin-bottom: 0.5em;
-  background-color: var(--background-altdrop-color);
+  margin-bottom: 0.1em;
+  color: var(--text-alt-color);
+  background-color: var(--background-alt-color);
 }
+
+/* styling van states */
+
+body.paginatwee footer p:first-of-type:hover {
+  text-decoration: underline;
+}
+
+/**/
 
 body.paginatwee footer p:nth-of-type(2) {
   font-size: 1.2em;
   font-weight: 200;
   padding: 0.9em;
-  margin-bottom: 0.5em;
-  background-color: var(--background-altdrop-color);
+  margin-bottom: 0.1em;
+  color: var(--text-alt-color);
+  background-color: var(--background-alt-color);
 }
+
+/* styling van states */
+
+body.paginatwee footer p:nth-of-type(2):hover {
+  text-decoration: underline;
+}
+
+/**/
 
 body.paginatwee footer p:nth-of-type(3) {
   font-size: 1.2em;
   font-weight: 200;
   padding: 0.9em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
+  color: var(--text-alt-color);
+  background-color: var(--background-alt-color);
+}
+
+/* styling van states */
+
+body.paginatwee footer p:nth-of-type(3):hover {
+  text-decoration: underline;
+}
+
+/**/
+
+/* styling toegevoegd bij het klikken op de p via js */
+
+body.paginatwee footer p:first-of-type.dichteen {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.1em;
+  color: var(--text-default-color);
   background-color: var(--background-altdrop-color);
 }
+
+/* styling toegevoegd bij het klikken op de p via js */
+
+body.paginatwee footer p:nth-of-type(2).dichttwee {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.1em;
+  color: var(--text-default-color);
+  background-color: var(--background-altdrop-color);
+}
+
+/* styling toegevoegd bij het klikken op de p via js */
+
+body.paginatwee footer p:nth-of-type(3).dichtdrie {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0.9em;
+  margin-bottom: 0.1em;
+  color: var(--text-default-color);
+  background-color: var(--background-altdrop-color);
+}
+
+/**/
 
 body.paginatwee footer nav:first-of-type {
   margin-bottom: 0.5em;
@@ -865,16 +1371,24 @@ body.paginatwee footer nav:first-of-type ul li {
   list-style: none;
 }
 
-body.paginatwee footer nav:first-of-type ul li a img{
+body.paginatwee footer nav:first-of-type ul li a img {
   max-width: 3.5em;
   margin: 0.2em;
 }
 
-body.paginatwee footer section:first-of-type {
+/* styling toegevoegd bij het klikken op de p via js */
+
+body.paginatwee footer section:first-of-type.opentwee {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+/**/
+
+body.paginatwee footer section:first-of-type {
+  display: none;
 }
 
 body.paginatwee footer section:first-of-type section a img {
@@ -882,17 +1396,19 @@ body.paginatwee footer section:first-of-type section a img {
   margin: 0.9em;
 }
 
-body.paginatwee footer section:nth-of-type(2) {
+footer section:nth-of-type(2) {
+  background-image: url("/images/landenmapgrey.png");
+  background-repeat: no-repeat;
+  background-position: top;
+
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-body.paginatwee footer section:nth-of-type(2).landen {
-  background-image: url("/images/landenmapgrey.png");
-  background-repeat: no-repeat;
-  background-position: top;
+footer section:nth-of-type(2).landen {
+  display: none;
 }
 
 body.paginatwee footer section:nth-of-type(2) section {
@@ -900,6 +1416,10 @@ body.paginatwee footer section:nth-of-type(2) section {
   flex-direction: column;
   justify-content: flex-start;
   margin: 2em;
+}
+
+footer section.negeren {
+  background-image: none;
 }
 
 body.paginatwee footer section:nth-of-type(2) section h3 {
@@ -951,6 +1471,31 @@ body.paginatwee footer section:nth-of-type(3) section:first-of-type nav ul li a 
   font-size: 0.8em;
   font-weight: 200;
 }
+
+/* styling van de states */
+
+body.paginatwee footer section:nth-of-type(3) section:first-of-type nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--text-alt-color);
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+body.paginatwee footer section:nth-of-type(3) section:first-of-type nav ul li a:focus {
+  text-decoration: underline;
+  color: var(--text-alt-color);
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+body.paginatwee footer section:nth-of-type(3) section:first-of-type nav ul li a:active {
+  text-decoration: underline;
+  color: var(--text-alt-link-color);
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+/**/
 
 body.paginatwee footer section:nth-of-type(3) h2 {
   margin-top: 1em;
